@@ -1,0 +1,12 @@
+{
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.colorTheme": "Aura Dark",
+    "git.openRepositoryInParentFolders": "never",
+    "emmet.extensionsPath": [
+        "C:\\Users\\Alumno-Tarde\\elanahir\\resources\\emmet-snippets"
+    ],
+    "emmet.variables": {
+        "lang": "es"
+    },
+    "php.debug.executablePath": "C:\\laragon\\bin\\php\\php-8.3.16-Win32-vs16-x64\\php.exe"
+}
