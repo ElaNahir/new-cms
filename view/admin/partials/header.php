@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de administración</title>
+    <link rel="shortcut icon" href="<?php echo $_SESSION['public'] ?>img/favicon.svg" type="image/x-icon">
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -19,7 +20,7 @@
 
             <!-- logo -->
             <a href="<?php echo $_SESSION['home'] ?>admin" class="brand-logo" title="Inicio">
-                <img src="<?php echo $_SESSION['public'] ?>img/logo.svg" alt="Logotipo">
+                <h5 class="logo">ADVENTURERS</h5>
             </a>
             <?php if (isset($_SESSION['usuario'])) { ?>
 
@@ -54,7 +55,7 @@
     <?php if (isset($_SESSION['usuario'])) { ?>
 
        <!-- Menú de navegación móvil-->
-  <ul id="sidenav" class="mobile-demo">
+  <ul class="sidenav" id="mobile-demo">
                     <li>
                         <a href="<?php echo $_SESSION['home'] ?>admin" title="Inicio">Inicio</a>
                     </li>
@@ -96,7 +97,7 @@
                 Usuario: <strong><?php echo $_SESSION['usuario']?></strong>
             </h2>
             <?php } else { ?>
-                <h2>Bienvenido! Instroduce usuario y contraseña.</h2>
+                <h2>Bienvenido! Introduce usuario y contraseña.</h2>
                 <?php } ?>
         </header>
 

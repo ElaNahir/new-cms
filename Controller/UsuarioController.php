@@ -136,7 +136,7 @@ class UsuarioController
 
             //Mensaje y redirección
             ($consulta > 0) ? //Compruebo consulta para ver que no ha habido errores
-                $this->view->redireccionConMensaje("admin/usuarios","green","El usuario <strong>$usuario->usuario</strong> se ha desactivado correctamente.") :
+                $this->view->redireccionConMensaje("admin/usuarios","green","El usuario <strong> $usuario->usuario </strong> se ha desactivado correctamente.") :
                 $this->view->redireccionConMensaje("admin/usuarios","red","Hubo un error al guardar en la base de datos.");
         }
 
@@ -147,7 +147,7 @@ class UsuarioController
 
             //Mensaje y redirección
             ($consulta > 0) ? //Compruebo consulta para ver que no ha habido errores
-                $this->view->redireccionConMensaje("admin/usuarios","green","El usuario <strong>$usuario->usuario</strong> se ha activado correctamente.") :
+                $this->view->redireccionConMensaje("admin/usuarios","green","El usuario <strong> $usuario->usuario </strong> se ha activado correctamente.") :
                 $this->view->redireccionConMensaje("admin/usuarios","red","Hubo un error al guardar en la base de datos.");
         }
 

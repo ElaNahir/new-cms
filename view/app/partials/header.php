@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias de Harry Potter</title>
+    <title>ADVENTURERS - Blog de viajes</title>
+    <link rel="shortcut icon" href="<?php echo $_SESSION['public'] ?>img/favicon.svg" type="image/x-icon">
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -19,7 +20,7 @@
 
             <!-- logo -->
             <a href="<?php echo $_SESSION['home'] ?>" class="brand-logo" title="Inicio">
-                <img src="<?php echo $_SESSION['public'] ?>img/logo.svg" alt="Logotipo">
+                <h5 class="logo">ADVENTURERS</h5>
             </a>
 
             <!-- botón de menú móviles -->
@@ -37,6 +38,9 @@
                 </li>
                 <li>
                     <a href="<?php echo $_SESSION['home'] ?>acerca-de" title="Acerca de">Acerca de</a>
+                </li>
+                <li>
+                    <a href="<?php echo $_SESSION['home'] ?>contacto" title="Contacto">Contacto</a>
                 </li>
                 <li>
                     <a href="<?php echo $_SESSION['home'] ?>admin" title="Administración" target="_blank" class="grey-text">Admin</a>
@@ -57,14 +61,12 @@
             <a href="<?php echo $_SESSION['home'] ?>acerca-de" title="Acerca de">Acerca de</a>
         </li>
         <li>
+            <a href="<?php echo $_SESSION['home'] ?>contacto" title="Contacto">Contacto</a>
+        </li>
+        <li>
             <a href="<?php echo $_SESSION['home'] ?>admin" title="Administración" target="_blank" class="grey-text">Admin</a>
         </li>
     </ul>
 
     <main>
-        <header>
-            <h1>Primer CMS</h1>
-            <h2>con POO, MVC, PHP y MySQL</h2>
-        </header>
-
-        <section class="container-fluid">
+        

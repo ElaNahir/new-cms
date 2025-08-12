@@ -1,4 +1,9 @@
 /* Layout */
+:root {
+    --brand-color-1: #13303b;
+    --brand-color-2: #8ec7d8;
+
+}
 
 html {
     color: #333;
@@ -12,16 +17,24 @@ body {
 }
 
 nav {
-    background-color: #333;
+    background-color: var(--brand-color-1);
     box-shadow: none;
     -webkit-box-shadow: none;
     padding-top: 0 2rem;
 }
 
-nav img {
-    width: 8rem;
-    padding-top: .8rem;
+.logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.8rem;
+    padding-top: .2rem;
+    padding-left: 1rem;
 }
+
+/* nav img {
+    width: 8rem;
+    padding-top: 1rem;
+    padding-left: .9rem;
+} */
 
 main {
     flex: 1 0 auto;
@@ -42,17 +55,17 @@ header h2 {
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--brand-color-1);
     color: #fff;
     padding: 1rem 0;
+}
 
-    & a {
-        color: #fff;
+a {
+    color: var(--brand-color-1);
 
-
-        &:hover {
-            text-decoration: underline;
-        }
+    &:hover {
+        text-decoration: underline;
+        color: var(--brand-color-2); 
     }
 }
 
@@ -75,11 +88,18 @@ section h3 span {
 }
 
 .btn {
-    background-color: #777;
+    background-color: var(--brand-color-1);
 
     &:hover {
-        background-color: #333;
+        background-color: var(--brand-color-2);
     }
+}
+
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.btn-floating:focus {
+    background-color: var(--brand-color-2);
 }
 
 article h4 {
@@ -124,7 +144,7 @@ article .card-info {
     border: none;
     box-shadow: none;
     -webkit-box-shadow: none;
-    color: #333;
+    color: #777;
     cursor: pointer;
 }
 

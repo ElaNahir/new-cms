@@ -14,3 +14,4 @@
         <a href="<?php echo $_SESSION['home'] ?>admin/salir" title="Salir">Salir</a>
     </li>
 </ul>
+

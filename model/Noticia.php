@@ -29,4 +29,4 @@ class Noticia
         $this->autor = ($data) ? $data->autor : null;
         $this->imagen = ($data) ? $data->imagen : null;
     }
-}
+};

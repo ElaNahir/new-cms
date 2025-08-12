@@ -7,7 +7,7 @@ $(document).ready(function(){
     let input_tipo = $("input[name=tipo-mensaje]");
     let input_texto = $("input[name=texto-mensaje]");
     if (input_tipo.length && input_texto.length) {
-        M.toast({html: input_texto.val(), clases: input_tipo.val() + "lighten-5"});
+        M.toast({html: input_texto.val(), classes: input_tipo.val() + " lighten-5"});
     }
 
     // Ocultar toast
@@ -21,7 +21,7 @@ $(document).ready(function(){
     });
 
     // Fecha
-    $(".datapicker").datapicker({
+    $(".datepicker").datepicker({
         firstDay: true,
         format: 'dd-mm-yyyy',
         i18n: {

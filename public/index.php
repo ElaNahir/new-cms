@@ -66,6 +66,9 @@ switch ($ruta) {
     case "acerca-de":
         controller()->acercade();
         break;
+        case "contacto":
+        controller()->contacto();
+        break;
     case "noticias":
         controller()->noticias();
         break;
@@ -83,8 +86,8 @@ switch ($ruta) {
         controller("usuarios")->salir();
         break;
 
+        
     // Usuarios URLs    
-
     case "admin/usuarios":
         controller("usuarios")->index();
         break;

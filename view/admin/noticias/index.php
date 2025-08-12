@@ -49,39 +49,37 @@
                         <?php $color = ($row->activo == 1) ? "green-text" : "red-text" ?>
                         <?php $icono = ($row->activo == 1) ? "mood" : "mood_bad" ?>
 
-                        <a href="<?php echo $_SESSION['home'] . 'admin/usuarios/activar/' . $row->id ?>" title="<?php echo $title ?>"> <i class="<?php echo $color ?> material-icons"><?php echo $icono ?></i></a>
+                        <a href="<?php echo $_SESSION['home'] . 'admin/noticias/activar/' . $row->id ?>" title="<?php echo $title ?>"> <i class="<?php echo $color ?> material-icons"><?php echo $icono ?></i></a>
 
                         <?php $title = ($row->home == 1) ? "Quitar de Home" : "Mostrar en Home" ?>
                         <?php $color = ($row->home == 1) ? "green-text" : "red-text" ?>
 
-                        <a href="<?php echo $_SESSION['home'] . 'admin/usuarios/home/' . $row->id ?>" title="<?php echo $title ?>">
-                           <i class="<?php echo $color ?> material-icons">home</i>
+                        <a href="<?php echo $_SESSION['home'] . 'admin/noticias/home/' . $row->id ?>" title="<?php echo $title ?>">
+                            <i class="<?php echo $color ?> material-icons">home</i>
                         </a>
 
                         <a href="#" class="activator" title="borrar">
                             <i class="material-icons">delete</i>
                         </a>
-
-                        <!-- Confirmación de eliminar-->
-
-                        <div class="card-reveal">
-
-                        <span class="card-title grey-text text-darken-4">
-                            Borrar noticia <i class="material-icons right">close</i>
-                        </span>
-                        <p>Estás seguro de que quieres eliminar definitivamente esta noticia
-                            <strong><?php echo $row->titulo; ?></strong>?
-                            <br>
-                            Esta acción no se puede deshacer.
-                            </p>
-                            <a href="<?php echo $_SESSION['home'].'admin/noticias/borrar'.$row->id; ?>" title="Borrar">
-                                <button class="btn waves-effect waves-light" type="button">Borrar
-                                    <i class="material-icons right">delete</i>
-                                </button>
-                            </a>
-                        </div>
-
                     </div>
+                </div>
+                <!-- Confirmación de eliminar-->
+
+                <div class="card-reveal">
+
+                    <span class="card-title grey-text text-darken-4">
+                        Borrar noticia <i class="material-icons right">close</i>
+                    </span>
+                    <p>Estás seguro de que quieres eliminar definitivamente esta noticia
+                        <strong><?php echo $row->titulo; ?></strong>?
+                        <br>
+                        Esta acción no se puede deshacer.
+                    </p>
+                    <a href="<?php echo $_SESSION['home'] .'admin/noticias/borrar/' . $row->id; ?>" title="Borrar">
+                        <button class="btn waves-effect waves-light" type="button">Borrar
+                            <i class="material-icons right">delete</i>
+                        </button>
+                    </a>
                 </div>
             </div>
         </article>

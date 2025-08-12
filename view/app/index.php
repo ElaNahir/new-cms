@@ -1,26 +1,33 @@
-<h3>Inicio</h3>
+<header>
+    <h1>El mejor blog de viajes paradisíacos!</h1>
+    <h2>Descubre las últimas playas destacadas!</h2>
+</header>
 
-<div class="row">
-    <?php foreach($datos as $row) {?>
-        <article class="col m12 l6">
-            <div class="card horizontal small">
-                <div class="card-image">
-                    <img src="<?php echo $_SESSION['public']."img/".$row->imagen ?>" alt="<?php echo $row->titulo ?>">
+<section class="container-fluid">
+
+    <h3>Inicio</h3>
+
+    <div class="row">
+        <?php foreach ($datos as $row) { ?>
+            <article class="col m12 l6">
+                <div class="card horizontal small">
+                    <div class="card-image">
+                        <img src="<?php echo $_SESSION['public'] . "img/" . $row->imagen ?>" alt="<?php echo $row->titulo ?>">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <h4><?php echo $row->titulo ?></h4>
+                            <p><?php echo $row->entradilla ?></p>
+                        </div>
+                        <div class="card-info">
+                            <!--<p>< ?php echo date("d/m/Y", strtotime($row->fecha)) ?></p>-->
+                            <p><?php echo $row->fecha ? date("d/m/Y", strtotime($row->fecha)) : 'Sin fecha'; ?></p>
+                        </div>
+                        <div class="card-action">
+                            <a href="<?php echo $_SESSION['home'] . "noticia/" . $row->slug ?>">Leer más...</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h4><?php echo $row->titulo ?></h4>
-                        <p><?php echo $row->entradilla ?></p>
-                    </div>
-                    <div class="card-info">
-                    <!--<p>< ?php echo date("d/m/Y", strtotime($row->fecha)) ?></p>-->
-                    <p><?php echo $row->fecha ? date("d/m/Y", strtotime($row->fecha)) : 'Sin fecha'; ?></p>
-                    </div>
-                    <div class="card-action">
-                        <a href="<?php echo $_SESSION['home']."noticia/".$row->slug ?>">Leer más...</a>
-                    </div>
-                </div>
-            </div>
-        </article>
-    <?php } ?>
-</div>
+            </article>
+        <?php } ?>
+    </div>

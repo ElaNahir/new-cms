@@ -1,5 +1,11 @@
 /* Layout */
 
+:root {
+    --brand-color-1: #13303b;
+    --brand-color-2: #8ec7d8;
+
+}
+
 html {
     color: #333;
 
@@ -12,16 +18,23 @@ body {
 }
 
 nav {
-    background-color: #333;
+    background-color: var(--brand-color-1);
     box-shadow: none;
     -webkit-box-shadow: none;
     padding-top: 0 2rem;
 }
 
-nav img {
-    width: 8rem;
-    padding-top: .8rem;
+.logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.8rem;
+    padding-top: .2rem;
+    padding-left: 1rem;
 }
+/* nav img {
+    width: 8rem;
+    padding-top: 1rem;
+    padding-left: .9rem;
+} */
 
 main {
     flex: 1 0 auto;
@@ -42,17 +55,20 @@ header h2 {
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--brand-color-1);
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
 
-    & a {
-       color: #fff;
+a {
+    color: #fff;
 
 
-       &:hover {
+    &:hover {
         text-decoration: underline;
-       }
+        color: #9ba1c2;
     }
 }
 
@@ -90,6 +106,7 @@ article .card-info {
 
 .card.horizontal.small .card-image img {
     margin-top: 20%;
+    padding-left: 2rem;
 }
 
 .card.horizontal.noticia {
@@ -98,3 +115,51 @@ article .card-info {
     -webkit-box-shadow: none;
 }
 
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+
+    color: var(--brand-color-1);
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--brand-color-2);
+    }
+ }
+
+/*Sección Formulario*/
+
+textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 6rem;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.btn-floating:focus {
+    background-color: #9ba1c2;
+}
+
+
+.error {
+    color: #ff0000;
+    font-weight: 600;
+    font-size: .9em;
+    margin-top: 5px;
+}
+
+.btn {
+    background-color: var(--brand-color-1);
+
+    &:hover {
+        background-color: var(--brand-color-2);
+    }
+}
