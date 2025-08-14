@@ -105,6 +105,7 @@ article .card-info {
 }
 
 .card.horizontal.small .card-image img {
+    max-height: 90%;
     margin-top: 20%;
     padding-left: 2rem;
 }
